@@ -1,0 +1,38 @@
+body {
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+}
+.bg {
+  height: 100vh;
+  width: 100vw;
+  z-index: -50;
+}
+.start {
+  position: relative;
+  z-index: 50;
+  font-size: 50px;
+  color: red;
+  bottom: 10vh;
+}
+.cont {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.flash-appear {
+  color: red;
+}
+
+.flash-appear.example-appear-active {
+  color: blue;
+  transition: c 0.5s ease-in;
+}
