@@ -13,12 +13,15 @@ class App extends React.Component {
         className="cont"
         style={{ backgroundImage: "url(" + this.state.currentBackground + ")" }}
       >
-        <ReactCSSTransitionGroup>
-          transitionName="flash" transitionAppear={true}
-          transitionAppearTimeout={500}
+        {/* <CSSTransitionGroup
+          transitionName="flash"
+          transitionAppear={true}
+          transitionAppearInterval={500}
           transitionEnter={false}
-          transitionLeave={false}><p className="start">Press Enter</p>
-        </ReactCSSTransitionGroup>
+          transitionLeave={true}
+        > */}
+        <p className="start">Press Enter</p>
+        {/* </CSSTransitionGroup> */}
       </div>
     );
   }

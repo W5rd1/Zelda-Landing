@@ -28,11 +28,20 @@ body {
   align-items: flex-end;
   justify-content: center;
 }
-.flash-appear {
-  color: red;
+.start {
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
 }
 
-.flash-appear.example-appear-active {
-  color: blue;
-  transition: c 0.5s ease-in;
+@keyframes flash {
+  from {
+    color: GREY;
+  }
+  to {
+    color: black;
+  }
 }
