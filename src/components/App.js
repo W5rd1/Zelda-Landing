@@ -1,27 +1,31 @@
 import React from "react";
 import Home from "../images/castle.png";
 import "./App.css";
-import { CSSTransitionGroup } from "react-transition-group";
+
 class App extends React.Component {
   state = {
     currentBackground: Home
   };
 
+  componentDidMount() {
+    window.addEventListener("keyup", event => {
+      if (event.key === "Enter") {
+        console.log(event);
+        this.setState({ currentBackground: "https://i.imgur.com/0R00g4N.png" });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("keyup", this.handleKeyUp);
+  }
   render() {
     return (
       <div
         className="cont"
         style={{ backgroundImage: "url(" + this.state.currentBackground + ")" }}
       >
-        {/* <CSSTransitionGroup
-          transitionName="flash"
-          transitionAppear={true}
-          transitionAppearInterval={500}
-          transitionEnter={false}
-          transitionLeave={true}
-        > */}
         <p className="start">Press Enter</p>
-        {/* </CSSTransitionGroup> */}
       </div>
     );
   }

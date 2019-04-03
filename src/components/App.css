@@ -12,9 +12,10 @@ body {
 .start {
   position: relative;
   z-index: 50;
-  font-size: 50px;
+  font-size: 25px;
   color: red;
-  bottom: 10vh;
+  bottom: 13vh;
+  font-family: "Press Start 2P", cursive;
 }
 .cont {
   position: absolute;
