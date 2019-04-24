@@ -2,7 +2,7 @@ import React from "react";
 import Home from "../images/castle.png";
 import "./App.css";
 import Entrance from "./Entrance";
-import Flashtext from "./Flashtext";
+import Room from "./Room";
 
 class App extends React.Component {
   state = {
@@ -10,7 +10,11 @@ class App extends React.Component {
     title: "Michael Eldred",
     subtitle: "Full-stack Web Developer",
     greeting: "Press Start",
-    phase: 1
+    phase: 1,
+    header: "About Me",
+    content: "This is the about me section",
+    bg:
+      "https://nowplayable.com/wp-content/uploads/2019/02/Path-of-Exile-The-Shaper-Map-Device.jpg"
   };
 
   componentDidMount() {
@@ -58,7 +62,13 @@ class App extends React.Component {
         </div>
       );
     } else {
-      return <div>Hi there</div>;
+      return (
+        <Room
+          header={this.state.header}
+          content={this.state.content}
+          bg={this.state.bg}
+        />
+      );
     }
   }
 }
