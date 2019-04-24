@@ -7,10 +7,10 @@ class Entrance extends React.Component {
     return (
       <div className="info">
         <div className="title">
-          <h1>Michael Eldred</h1>
-          <p>Full-Stack Web Developer</p>
+          <h1>{this.props.title}</h1>
+          <p>{this.props.subtitle}</p>
         </div>
-        <Flashtext />
+        <Flashtext greeting={this.props.greeting} />
       </div>
     );
   }
